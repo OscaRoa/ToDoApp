@@ -9,10 +9,21 @@
 import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var toDoItemTextField: UITextField!
     
     @IBAction func addItem(sender: AnyObject) {
+        
+        if (toDoItemTextField.text != nil && toDoItemTextField.text != "") {
+        
+            toDoList.append(toDoItemTextField.text!)
+        
+            toDoItemTextField.text = ""
+            
+        } else {
+            toDoItemTextField.text = ""
+        }
+        
     }
     
     override func viewDidLoad() {
