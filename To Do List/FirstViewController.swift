@@ -8,7 +8,7 @@
 
 import UIKit
 
-var toDoList = [String]()       //ToDoList array global for both views
+var toDoList = [String]()       //  toDoList array global for both views
 
 class FirstViewController: UIViewController, UITableViewDelegate {
 
@@ -16,8 +16,8 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        //  To avoid crashes we check if there's data already saved.
         if NSUserDefaults.standardUserDefaults().objectForKey("toDoList") != nil {
          
             toDoList = NSUserDefaults.standardUserDefaults().objectForKey("toDoList") as! [String]

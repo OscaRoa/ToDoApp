@@ -23,7 +23,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
             
         } else {
+            
             toDoItemTextField.text = ""
+            
         }
         
     }
